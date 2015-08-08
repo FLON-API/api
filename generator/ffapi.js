@@ -62,7 +62,7 @@ $.getJSON("config.json", function(config) {
 				$( '#dirselect' ).append($('<option>').text('choose a community from list'));
 				var protocol = window.location.origin.split(':')[0] + ':';
 				var proxy = "php-simple-proxy/ba-simple-proxy.php?url=";
-				var directoryUrl = "//rawgit.com/freifunk/directory.api.freifunk.net/master/directory.json";
+				var directoryUrl = "//rawgit.com/flon-api/directory/master/directory.json";
 				var url = proxy + protocol + directoryUrl;
 				$.getJSON(url, function(dir) {
 					if (dir.contents) {
