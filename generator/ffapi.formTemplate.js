@@ -20,8 +20,29 @@ ffapi.formTemplate =
 		"items": [
 			"contact.email",
 			"contact.phone"
+		  "contact.jabber",
+			"contact.irc",
+			"contact.ml",
+			"contact.identica",
+			"contact.facebook",
+			"contact.twitter",
+			"contact.googleplus"
 		]
 	}, {
+			"state.nodes", {
+				"key": "state.description",
+				"type": "textarea"
+			}, {
+				"key": "state.focus",
+				"type": "checkboxes",
+				"titleMap": {
+					"infrastructure/backbone": "We build infrastructure or backbone connections",
+					"Public Free Wifi": "We offer public free wifi",
+					"Social Community Building": "We do local socical networking",
+					"Local services and content": "We establish local services and provide local content",
+					"Free internet access": "We provide internet access within our network"
+				}
+			}, {
 		"type": "button",
 		"onClick": function (evt) {
 			evt.preventDefault();
@@ -39,34 +60,6 @@ ffapi.formTemplate =
 		"title": "Advanced fields...",
 		// "expandable": true,
 		"items": [
-			"metacommunity",
-			"state.nodes", {
-				"key": "state.description",
-				"type": "textarea"
-			}, {
-				"key": "state.focus",
-				"type": "checkboxes",
-				"titleMap": {
-					"infrastructure/backbone": "We build infrastructure or backbone connections",
-					"Public Free Wifi": "We offer public free wifi",
-					"Social Community Building": "We do local socical networking",
-					"Local services and content": "We establish local services and provide local content",
-					"Free internet access": "We provide internet access within our network"
-				}
-			}, {
-				"type": "fieldset",
-				"title": "Advanced Contacts",
-				"expandable": true,
-				"items": [
-					"contact.jabber",
-					"contact.irc",
-					"contact.ml",
-					"contact.identica",
-					"contact.facebook",
-					"contact.twitter",
-					"contact.googleplus"
-				]
-			}, {
 				"type": "fieldset",
 				"title": "Location Details",
 				"expandable": true,
@@ -113,11 +106,6 @@ ffapi.formTemplate =
 				"title": "Node Maps",
 				"expandable": true,
 				"items": "nodeMaps"
-			}, {
-				"type": "fieldset",
-				"title": "How to support you?",
-				"expandable": true,
-				"items": "support"
 			}, {
 				"type": "fieldset",
 				"title": "Technical Details",
