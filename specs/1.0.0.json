@@ -18,23 +18,17 @@
 				"description": "The name of your community",
 				"required": true
 			},
-			"metacommunity": {
-				"title": "Metacommunity",
-				"type": "string",
-				"description": "The name of your meta community. if you local community belongs to a bigger community",
-				"required": false
-			},
 			"location": {
 				"title": "Location",
 				"type": "object",
 				"description": "Position data such as a postal address or geographic coordinates",
-				"required": true,
+				"required": false,
 				"properties": {
 					"city": {
 						"title": "City",
 						"type": "string",
 						"description": "name of your city or region",
-						"required": true
+						"required": false
 					},
 					"country": {
 						"title": "Country",
@@ -73,13 +67,13 @@
 						"title": "Latitude",
 						"type": "number",
 						"description": "Latitude of your city in decimal degrees (e.g. 51.12345)",
-						"required": true
+						"required": false
 					},
 					"lon": {
 						"title": "Longitude",
 						"type": "number",
 						"description": "Longitude of your city in decimal degrees (e.g. 11.6789)",
-						"required": true
+						"required": false
 					}
 				}
 			},
@@ -351,124 +345,6 @@
 							"type": "string",
 							"description": "URI to use your service from freifunk or icvpn-networks",
 							"required": false
-						}
-					}
-				}
-			},
-			"support": {
-				"type": "object",
-				"description": "support for your community, e.g. by a local club, and donations via campaigns e.g. by betterplace.de",
-				"required": false,
-				"properties": {
-					"club": {
-						"title": "Supporting Club",
-						"type": "object",
-						"required": false,
-						"properties": {
-							"name" : {
-								"title": "Club Name",
-								"type": "string",
-								"description": "Name of the Club",
-								"required": false
-							},
-							"street" : {
-								"title": "Street",
-								"type": "string",
-								"description": "Address - Street",
-								"required": false
-							},
-							"zip" : {
-								"title": "zip",
-								"type": "string",
-								"description": "Address - ZIP",
-								"required": false
-							},
-							"city" : {
-								"title": "City",
-								"type": "string",
-								"description": "Address - City",
-								"required": false
-							},
-							"url": {
-								"title": "Homepage",
-								"type": "string",
-								"pattern": "^(http|https)://[A-Za-z0-9ÄÖÜäöüß\\-_\\./]+",
-								"description": "The club's website (http{s}://...)",
-								"required": false
-							},
-							"email": {
-								"title": "Email",
-								"type": "string",
-								"pattern": "^[A-Za-z0-9äöüÄÖUß_\\-\\.]+@[A-Za-z0-9äöüÄÖUß_\\-\\.]+\\.[A-Za-z]{2,}$",
-								"description": "Email address to contact the club (user@domain.com)",
-								"required": false
-							},
-							"board" : {
-								"title": "Board Members",
-								"type": "array",
-								"description": "Who are board members of the club?",
-								"required": false,
-								"items": {
-									"type": "string",
-									"title": "name",
-									"required": false
-								}
-							}
-						}
-					},
-					"donations": {
-						"type": "object",
-						"title": "Donations",
-						"required": false,
-						"properties": {
-							"bankaccount": {
-								"type": "object",
-								"title": "Bank Account",
-								"required": false,
-								"properties": {
-									"IBAN": {
-										"type": "string",
-										"title": "IBAN",
-										"required": false
-									},
-									"BIC": {
-										"type": "string",
-										"title": "BIC",
-										"required": false
-									},
-									"usage": {
-										"type": "string",
-										"title": "Usage of the donation",
-										"description": "Please use this string as transfer-purpose to define a special usage of your donation.",
-										"required": false
-									}
-								}
-							},
-							"campaigns": {
-								"title": "Campagins",
-								"type": "array",
-								"required": false,
-								"items": {
-									"type": "object",
-									"required": false,
-									"properties": {
-										"provider": {
-											"title": "Campaign Provider",
-											"type": "string",
-											"description": "Where do you host your donations?",
-											"enum": ["", "betterplace", "boost"],
-											"default": "",
-											"required": false
-										},
-										"projectid": {
-											"title": "Project ID",
-											"type": "string",
-											"description" :"ID of your project, betterplace ids are multiple digits and can be found within the url",
-											"required": false
-										}
-									}
-								}
-							}
 						}
 					}
 				}
