@@ -19,7 +19,7 @@ ffapi.formTemplate =
 		"title": "Contact",
 		"items": [
 			"contact.email",
-			"contact.phone"
+			"contact.phone",
 		  "contact.jabber",
 			"contact.irc",
 			"contact.ml",
@@ -28,7 +28,7 @@ ffapi.formTemplate =
 			"contact.twitter",
 			"contact.googleplus"
 		]
-	}, {
+  } ,
 			"state.nodes", {
 				"key": "state.description",
 				"type": "textarea"
@@ -57,9 +57,10 @@ ffapi.formTemplate =
 		"helpvalue": "<br/><div>The previous fields only contain a <strong>very reduced set</strong> of possible data fields. If you already know some details please take a look on the fields below to complete your file.</div><br/>"
 	}, {
 		"type": "fieldset",
-		"title": "Advanced fields...",
+		"title": "Advanced fields...",  
 		// "expandable": true,
 		"items": [
+      {
 				"type": "fieldset",
 				"title": "Location Details",
 				"expandable": true,
