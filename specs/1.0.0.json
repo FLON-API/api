@@ -454,6 +454,18 @@
 							}
 						}
 					},
+					"asn": {
+						"type": "array",
+						"title": "Autonomous System Numbers",
+						"description": "Autonomous System Numbers used by your community",
+						"required": false,
+						"items": {
+							"type": integer,
+							"title": "ASN",
+							"description": "ASN",
+							"required": false
+						}
+					},
 					"routing": {
 						"title": "Routing protocols",
 						"description": "routing protocols used within your community",
