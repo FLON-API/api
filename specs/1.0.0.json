@@ -467,10 +467,13 @@
 								"Babel",
 								"batman-adv",
 								"bmx6",
-                "bmxd",
+						                "bmxd",
 								"cjdns",
 								"OLSR",
-								"OLSRv2"
+								"OLSRv2",
+								"OSPF",
+								"OSPFv3",
+								"BGP"
 							]
 						}
 					},
